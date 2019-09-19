@@ -201,6 +201,51 @@ module.exports = {
               },
             ],
           },
+          //less
+          {
+            test: /\.less$/,
+            use: [
+              {
+                loader: 'style-loader',
+                options: {
+                  sourceMap: process.env.NODE_ENV !== 'production',
+                },
+              },
+              {
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                  sourceMap: process.env.NODE_ENV !== 'production',
+                },
+              },
+              {
+                loader: "less-loader",
+                options: {
+                    javascriptEnabled: true
+                }
+            },
+            {
+              loader: require.resolve('postcss-loader'),
+              options: {
+                // Necessary for external CSS imports to work
+                // https://github.com/facebookincubator/create-react-app/issues/2677
+                ident: 'postcss',
+                plugins: () => [
+                  require('postcss-flexbugs-fixes'),
+                  autoprefixer({
+                    browsers: [
+                      '>1%',
+                      'last 4 versions',
+                      'Firefox ESR',
+                      'not ie < 9', // React doesn't support IE8 anyway
+                    ],
+                    flexbox: 'no-2009',
+                  }),
+                ],
+              },
+            }
+            ]
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
