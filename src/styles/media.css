@@ -1,0 +1,15 @@
+@media (min-width: 1210px) {
+  .app-body .header-box {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 768px) {
+  #masthead .inner {
+    padding-top: 3.75rem;
+  }
+}
+@media screen and (max-width: 1599px) and (min-width: 1302px) {
+  .app-body .container {
+    max-width: 864px;
+  }
+}
