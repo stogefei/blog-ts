@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Icon } from 'antd';
+import Footer from '../components/footer';
 class App extends React.Component {
   public render() {
     return (
@@ -165,6 +166,7 @@ class App extends React.Component {
                  
               </div>
           </div>
+          <Footer/>
         </div>
        
       </div>
