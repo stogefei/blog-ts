@@ -4,8 +4,8 @@ import Footer from '../components/footer';
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app-box">
+        <header className="app-header">
           <div className="header-box">
             <div className="head-left">
               <a href="/" className="navbar-brand text-brand">HRAN'S</a>
@@ -168,7 +168,7 @@ class App extends React.Component {
           </div>
           <Footer/>
         </div>
-       
+        <span id="backtop" className="waves-effect waves-button"><Icon type="up" /></span>
       </div>
     );
   }
