@@ -1,8 +1,9 @@
 @import './theme.less';
 @import './reset.less';
 @import './media.less';
-#root {
-  height: 100%;
+body {
+  height: auto;
+  overflow-y: auto;
 }
 .app-header {
   position: fixed;
