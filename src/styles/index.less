@@ -4,9 +4,10 @@
 body{
     height: auto;
     overflow-y: auto;
+    min-height: 100%;
 }
 #root{
-    // height: 100%;
+    min-height: 100%;
 }
 // 顶部样式
 .app-header{
@@ -47,10 +48,14 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+.text-brand {
+    line-height: 40px;
+    font-size: 1.5rem;
+    }
 .nav-link {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     color:rgba(0, 0, 0, 0.9);
+    line-height: 40px;
 }
 .navbar-brand:hover,.nav-link:hover{
     color:rgba(0, 0, 0, 0.7);
@@ -269,4 +274,16 @@ body{
 #backtop i{
     line-height: 3.75rem;
     font-size: 1rem;
+}
+
+#backtop:hover{
+    color: #1abc9c;
+    -webkit-box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.2);
+    box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.2);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
